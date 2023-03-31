@@ -12,6 +12,6 @@ CREATE TABLE ORDERS (
                         customer_id INT,
                         product_name VARCHAR(255),
                         amount INT,
-                        PRIMARY KEY(id)
-                            FOREIGN KEY(customer_id) REFERENCES CUSTOMERS(id)
+                        PRIMARY KEY(id),
+                        FOREIGN KEY(`customer_id`) REFERENCES CUSTOMERS(`id`)
 );

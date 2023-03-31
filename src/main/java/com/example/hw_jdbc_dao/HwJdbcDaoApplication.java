@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HwJdbcDaoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HwJdbcDaoApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(HwJdbcDaoApplication.class, args);
+    }
 }
