@@ -20,7 +20,7 @@ public class Repository {
     DataSource dataSource;
     @Autowired
     NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    String query = read("/home/dhuric/IdeaProjects/HW_JDBC_DAO/src/main/resources/SELECT_ORDERS.SQL");
+    String query = read("SELECT_ORDERS.SQL");
 
     public Repository() {
 
