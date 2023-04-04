@@ -1,6 +1,5 @@
 package com.example.hw_jdbc_dao.repository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -16,14 +15,12 @@ import java.util.stream.Collectors;
 
 @org.springframework.stereotype.Repository
 public class Repository {
-    @Autowired
-    DataSource dataSource;
-    @Autowired
-    NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    String query = read("SELECT_ORDERS.SQL");
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    private String query;
 
-    public Repository() {
-
+    public Repository(DataSource dataSource) {
+        this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+        query = read("SELECT_ORDERS.SQL");
     }
 
 
